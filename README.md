@@ -76,5 +76,19 @@ $app_secret_key = "kj9dJjd76I27U8HklK3jLsg4js8374";
 - Now setup tailwindcss. For that run npm commands on your terminals
 
 ```bash
-npm install tailwindcss @tailwindcss/cli
+npm install
 ```
+
+- Open lib/css/app.css and insert that line
+
+```css
+@import "tailwindcss";
+```
+
+- Now Generate output css file for optimal css
+
+```bash
+npx @tailwindcss/cli -i ./lib/css/app.css -o ./lib/css/style.css
+```
+
+- Now remove the extra tailwind config and cdn link from your header.php and uncomment the style.css link tag.
