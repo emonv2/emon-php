@@ -92,3 +92,36 @@ npx @tailwindcss/cli -i ./lib/css/app.css -o ./lib/css/style.css
 ```
 
 - Now remove the extra tailwind config and cdn link from your header.php and uncomment the style.css link tag.
+
+## 💡 Usage
+
+### Access the Application
+
+- Open your web browser and navigate to the URL where your project is hosted (e.g., http://localhost/emon-php).
+
+### Admin Login
+
+- The admin login page is typically located at /adm/login.php (or a similar path).
+- Default credentials (defined in database.sql):
+
+```txt
+username : admin
+password : admin
+```
+
+## 🔒 Admin Login System
+
+The admin login system provides a basic authentication mechanism:
+
+- Session-based authentication for maintaining user state.
+- Password hashing implemented for security (e.g., password_hash() and password_verify()).
+- Unauthorized access attempts are redirected to the login page.
+
+## 🤝 Contributing
+
+Feel free to fork this repository, submit issues, or propose pull requests. Contributions are welcome!
+
+## 📄 License
+
+This project is open-sourced under the MIT License.
+See the LICENSE
