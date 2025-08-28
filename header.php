@@ -93,7 +93,7 @@ $bgColor = $core->systemOption('site_bg_color')->var_value;
 
 <body style="font-family: 'Roboto', sans-serif;" class="bg-[<?= $bgColor ?>]">
     <div class="flex justify-center items-center flex-col text-emon-accent">
-        <div class="w-[336px] md:w-[728px] min-h-screen">
+        <div class="w-full md:w-[728px] min-h-screen">
 
             <!-- navbar start -->
             <div class="div-header flex justify-between my-1">
@@ -102,16 +102,6 @@ $bgColor = $core->systemOption('site_bg_color')->var_value;
                 </a>
 
                 <div class="flex gap-4">
-
-                    <?php if ($isLogged && session::get('whoIs') == 'system_user') { ?>
-                        <a href="<?= SITE_URL ?>/system_user/index.php">
-                            System_User
-                        </a>
-                    <?php } else if ($isAdmin) { ?>
-                        <a href="<?= SITE_URL ?>/system/index.php">
-                            Admin
-                        </a>
-                    <?php } ?>
                     <button id="openButton" class="block flex gap-2 items-center" onclick="openMenu()">
                         <i class="fa-solid fa-bars"></i> <span class="text-right text-xs underline">
                             MENU
@@ -126,37 +116,18 @@ $bgColor = $core->systemOption('site_bg_color')->var_value;
             </div>
 
             <div id="navbar" class="hidden mb-1">
-                <?php
-                if ($isAdmin) { ?>
-                    <a href="<?= SITE_URL ?>/system/index.php">
-                        <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
-                            Admin Portal
-                        </div>
-                    </a>
-                    <a href="<?= SITE_URL ?>/logout.php">
-                        <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
-                            logout
-                        </div>
-                    </a>
-                <?php } else if ($isSystemUser) { ?>
-                    <a href="<?= SITE_URL ?>/system_user/index.php">
-                        <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
-                            System User Portal
-                        </div>
-                    </a>
-                    <a href="<?= SITE_URL ?>/logout.php">
-                        <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
-                            logout
-                        </div>
-                    </a>
-                <?php } else { ?>
-                    <a href="index.php">
-                        <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
-                            Home
-                        </div>
-                    </a>
 
-                <?php } ?>
+                <a href="index.php">
+                    <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
+                        Home
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="div-header font-normal mb-1 hover:bg-transparent hover:text-emon-accent">
+                        About
+                    </div>
+                </a>
+
             </div>
 
             <!-- navbar end -->

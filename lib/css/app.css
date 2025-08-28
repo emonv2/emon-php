@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emon-red: "#FF0000";
+  --color-emon-green: "#30fa23";
+  --color-emon-accent: "#FFFFFF";
+}
+
+.div-header {
+  @apply bg-emon-accent font-semibold text-white py-2 md:py-4 px-3 md:px-4 uppercase flex justify-between items-center;
+}
+
+.div-header-bold {
+  @apply bg-emon-accent text-white py-2 md:py-4 px-3 md:px-4 uppercase;
+}
+
+.div-normal {
+  @apply py-2 md:py-4 px-3 md:px-4 uppercase;
+}
+
+.div-normal-border {
+  @apply border-2 py-2 md:py-4 px-3 md:px-4 border-emon-accent uppercase;
+}
+
+.div-space {
+  @apply py-2 md:py-4 px-3 md:px-4 uppercase;
+}
+
+.e-input {
+  @apply py-1.5 px-2.5 md:py-2 md:px-3 uppercase border-2 rounded-lg w-full md:w-1/2;
+}
+
+.e-button {
+  @apply bg-emon-accent rounded-lg px-5 py-2 text-white cursor-pointer uppercase;
+}
+
+.e-sort {
+  @apply text-right text-xs underline;
+}

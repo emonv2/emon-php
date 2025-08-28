@@ -1,6 +1,5 @@
 <div class="div-header md:justify-evenly gap-x-4 my-1 items-center">
 
-
     <a href="/" class="e-sort text-center">
         link 1
     </a>
