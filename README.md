@@ -53,9 +53,9 @@ private $hostdb = "localhost";
 // Your mysql username
 private $userdb = "root";
 // Your mysql password
-private $passdb = "eatuany";
+private $passdb = "password";
 // Your mysql bd name
-private $namedb = "ads_server";
+private $namedb = "php_starter_db";
 ```
 
 - Open lib/config.php and update the site configs:
@@ -71,4 +71,10 @@ $delete_warning = 'Are you sure you want to delete? If you do not, click cancel.
 $item_per_page = 6;
 // This is a secrete key for encryption your data
 $app_secret_key = "kj9dJjd76I27U8HklK3jLsg4js8374";
+```
+
+- Now setup tailwindcss. For that run npm commands on your terminals
+
+```bash
+npm install tailwindcss @tailwindcss/cli
 ```
